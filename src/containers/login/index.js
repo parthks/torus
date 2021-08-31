@@ -126,11 +126,12 @@ function Login() {
         {
           (openlogin && openlogin.privKey) ?
             <AccountInfo
+              connection={connection}
               handleLogout={handleLogout}
               loading={loading}
               privKey={solanaPrivateKey}
-              walletInfo={walletInfo}
               account={account}
+              accountInfo={walletInfo}
             /> :
             <div className="loginContainer">
                 <h1 style={{ textAlign: "center" }}>Openlogin x Solana</h1>
